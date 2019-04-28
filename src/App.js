@@ -1,26 +1,50 @@
 import React from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import { ReactiveBase } from '@appbaseio/reactivesearch';
+import MultipleList from './MultiList';
+import Search from './DataSearch';
+import SingularRange from './SingleRange';
+import Slider from './RangeSlider';
+import MultiData from './MultiDataList';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class Main extends React.Component {
+  props(){
+  this.theme={
+    typography: {
+      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif',fontSize: "16px"
+
+    },
+    colors: {
+      textColor: "#fff",
+      backgroundColor: "#212121",
+      primaryTextColor: "#fff",
+      primaryColor: "#2196F3",
+      titleColor: "#fff",
+      alertColor: "#d9534f",
+      borderColor: "#666"
+    }
+  }
+}
+  render() {
+    return (
+      <div className="main-container">
+        <ReactiveBase 
+          app="MovieAppFinal"
+          credentials="RxIAbH9Jc:6d3a5016-5e9d-448f-bd2b-63c80b401484"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+        Hello world
+      
+          <Search />
+          <MultipleList />
+          <SingularRange />
+          <MultiData />
+          <Slider />
+        </ReactiveBase>
+      </div>
+
+    ); 
+  }
 }
 
-export default App;
+export default Main;
