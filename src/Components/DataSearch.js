@@ -1,6 +1,5 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
+import '../App.css';
 import { DataSearch } from '@appbaseio/reactivesearch';
 
 class Search extends React.Component {

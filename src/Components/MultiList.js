@@ -1,6 +1,5 @@
 import React from 'react';
-// import logo from './logo.svg';
-// import './App.css';
+import '../App.css';
 import { MultiList } from '@appbaseio/reactivesearch';
 
 class MultipleList extends React.Component {

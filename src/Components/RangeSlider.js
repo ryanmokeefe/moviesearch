@@ -1,5 +1,6 @@
 import React from 'react';
 import { RangeSlider } from '@appbaseio/reactivesearch';
+import '../App.css';
 
 class Slider extends React.Component {
     render() {

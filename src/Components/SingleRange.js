@@ -1,5 +1,6 @@
 import React from 'react';
 import { SingleRange } from '@appbaseio/reactivesearch';
+import '../App.css';
 
 class SingularRange extends React.Component {
     render() {
